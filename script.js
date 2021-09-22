@@ -98,7 +98,7 @@ function check(level)
     {
         var audio=new Audio("sounds/wrong.mp3");
         audio.play();
-        $("#level-title").text("Game Over, Press Any Key to Restart");
+        $("#level-title").text("Game Over, Click here to Restart");
         $("body").addClass("game-over");
         setTimeout(function(){
             $("body").removeClass("game-over");
@@ -112,7 +112,7 @@ function check(level)
 
 
 //game starts here for key events
-$("body").keydown(function(){
+$("#level-title").click(function(){
 if(started!=0)
 {
     return;
